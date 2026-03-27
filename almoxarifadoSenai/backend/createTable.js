@@ -1,18 +1,18 @@
-import { sql } from './sql'
+import { sql } from './sql.js'
 
 // USERS
-await sql `
+await sql`
 CREATE TABLE IF NOT EXISTS users (
     id UUID PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT NOT NULL UNIQUE, 
     password TEXT NOT NULL,
-    setor TEXT,
+    setor TEXT
 );
 `
 
 // ITENS
-await sql `
+await sql`
 CREATE TABLE IF NOT EXISTS itens(
     id UUID PRIMARY KEY,
     nome TEXT NOT NULL,
